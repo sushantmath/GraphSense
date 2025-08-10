@@ -7,8 +7,8 @@ const slides = [
     id: 1,
     title: "A Force",
     subtitle: "For Good",
-    description: "With over seven decades of responsible business practices, we continue to shape industries and communities worldwide.",
-    backgroundImage: "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080",
+    description: "With innovative technology solutions and responsible business practices, we continue to shape industries and communities worldwide through automation, efficiency, and excellence.",
+    backgroundImage: "/force-for-good.png",
     buttons: [
       { text: "Our Businesses", link: "businesses", icon: ArrowRight },
       { text: "Innovation", link: "innovation", icon: ExternalLink, variant: "outline" as const },
