@@ -37,7 +37,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
               <img 
-                src="/attached_assets/Screenshot 2025-08-10 at 7.27.39 PM_1754834284586.png" 
+                src="/qoreworks-logo.svg" 
                 alt="QoreWorks Logo" 
                 className="h-10 w-10 mr-3"
               />
