@@ -40,7 +40,12 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 flex items-center">
+              <img 
+                src="/attached_assets/Screenshot 2025-08-10 at 7.27.39 PM_1754834284586.png" 
+                alt="QoreWorks Logo" 
+                className="h-8 w-8 mr-3"
+              />
               <span className="text-2xl font-bold text-ab-maroon">QoreWorks</span>
             </div>
           </div>
