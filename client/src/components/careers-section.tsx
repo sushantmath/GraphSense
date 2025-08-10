@@ -59,7 +59,7 @@ export default function CareersSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Join Our Team</h2>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            Discover your next chapter with us. Explore a rewarding career with Aditya Birla Group that aligns 
+            Discover your next chapter with us. Explore a rewarding career with QoreWorks that aligns 
             with your purpose, passion, and potential.
           </p>
         </div>

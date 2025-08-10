@@ -48,7 +48,7 @@ export default function BusinessShowcase() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-ab-charcoal mb-6">Our Diverse Portfolio</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            With over seven decades of responsible business practices, our businesses have grown into global powerhouses 
+            With innovative technology solutions and responsible business practices, our businesses have grown into market leaders 
             in a wide range of sectors – from automation tools to corporate solutions and innovative D2C brands.
           </p>
         </div>

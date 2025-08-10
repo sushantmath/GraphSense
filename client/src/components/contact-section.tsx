@@ -205,8 +205,8 @@ export default function ContactSection() {
                   <div>
                     <h4 className="text-lg font-semibold text-ab-charcoal mb-1">Head Office</h4>
                     <p className="text-gray-600">
-                      Birla Centre, Dr. Annie Besant Road<br />
-                      Worli, Mumbai - 400 030, India
+                      QoreWorks Headquarters<br />
+                      Innovation District, Tech City
                     </p>
                   </div>
                 </div>
@@ -217,7 +217,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-ab-charcoal mb-1">Phone</h4>
-                    <p className="text-gray-600">+91 22 6652 5000</p>
+                    <p className="text-gray-600">+1 (555) 123-4567</p>
                   </div>
                 </div>
 
@@ -227,7 +227,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-ab-charcoal mb-1">Email</h4>
-                    <p className="text-gray-600">contact@adityabirla.com</p>
+                    <p className="text-gray-600">contact@qoreworks.com</p>
                   </div>
                 </div>
               </div>

@@ -43,7 +43,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <span className="text-2xl font-bold text-ab-maroon">Aditya Birla Group</span>
+              <span className="text-2xl font-bold text-ab-maroon">QoreWorks</span>
             </div>
           </div>
 

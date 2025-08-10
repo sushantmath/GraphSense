@@ -27,8 +27,8 @@ export default function CommunitySection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-ab-charcoal mb-6">Community</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our purpose in action. At Aditya Birla Group, we believe that success goes beyond financial progress. 
-            It encompasses our shared responsibility to enable a sustainable way of life for all sections of society.
+            Our purpose in action. At QoreWorks, we believe that success goes beyond financial progress. 
+            It encompasses our shared responsibility to empower businesses and professionals with innovative tools.
           </p>
         </div>
 
@@ -42,24 +42,24 @@ export default function CommunitySection() {
           </div>
 
           <div>
-            <h3 className="text-3xl font-bold text-ab-charcoal mb-6">Reshaping the Future Through Education</h3>
+            <h3 className="text-3xl font-bold text-ab-charcoal mb-6">Empowering Professionals Through Technology</h3>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              Education is a powerful catalyst for change, and Aditya Birla Group is committed to harnessing 
-              its transformative potential. Through our comprehensive educational initiatives, we're building 
-              a foundation for sustainable development and empowering communities worldwide.
+              Technology is a powerful catalyst for change, and QoreWorks is committed to harnessing 
+              its transformative potential. Through our comprehensive automation solutions, we're building 
+              tools that empower busy professionals and drive business growth worldwide.
             </p>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Our programs span from primary education to higher learning, skill development, and digital literacy, 
-              ensuring that knowledge reaches every corner of society.
+              Our solutions span from social media automation to corporate services, business analytics, and AI-powered tools, 
+              ensuring that innovation reaches every corner of the business world.
             </p>
             <div className="grid grid-cols-2 gap-6 mb-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-ab-maroon mb-2">500+</div>
-                <div className="text-gray-600">Schools Supported</div>
+                <div className="text-3xl font-bold text-ab-maroon mb-2">1000+</div>
+                <div className="text-gray-600">Businesses Served</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-ab-maroon mb-2">2M+</div>
-                <div className="text-gray-600">Students Impacted</div>
+                <div className="text-3xl font-bold text-ab-maroon mb-2">50K+</div>
+                <div className="text-gray-600">Professionals Empowered</div>
               </div>
             </div>
             <Button size="lg" className="bg-ab-maroon hover:bg-ab-maroon-dark text-white">

@@ -33,7 +33,7 @@ export default function InnovationSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Innovation</h2>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            Pushing the boundaries of what's possible through disruptive technologies and visionary thinking 
+            Pushing the boundaries of what's possible through automation technologies and AI-powered solutions 
             across all our business verticals.
           </p>
         </div>

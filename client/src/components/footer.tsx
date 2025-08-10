@@ -36,10 +36,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="md:col-span-2">
-            <div className="text-3xl font-bold text-ab-maroon mb-4">Aditya Birla Group</div>
+            <div className="text-3xl font-bold text-ab-maroon mb-4">QoreWorks</div>
             <p className="text-gray-300 mb-6 max-w-lg leading-relaxed">
-              A Force For Good. With over seven decades of responsible business practices, we continue to shape 
-              industries and communities worldwide through innovation, sustainability, and excellence.
+              A Force For Good. With innovative technology solutions and responsible business practices, we continue to shape 
+              industries and communities worldwide through automation, efficiency, and excellence.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -95,7 +95,7 @@ export default function Footer() {
         <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              &copy; 2024 Aditya Birla Group. All rights reserved.
+              &copy; 2024 QoreWorks. All rights reserved.
             </p>
             <p className="text-gray-400 text-sm mt-4 md:mt-0 flex items-center">
               Designed with <Heart className="text-ab-maroon mx-1 w-4 h-4" /> for a better tomorrow

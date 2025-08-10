@@ -10,13 +10,13 @@ export default function LegacySection() {
             <h2 className="text-4xl md:text-5xl font-bold text-ab-charcoal mb-6">Legacy & Leadership</h2>
             <h3 className="text-2xl font-semibold text-ab-maroon mb-6">Our force of success</h3>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              For over seven decades, Aditya Birla Group has been at the forefront of India's industrial development. 
-              Our journey began with a vision to contribute to the nation's progress and has evolved into a global 
-              conglomerate that touches millions of lives across the world.
+              For years, QoreWorks has been at the forefront of business automation and digital transformation. 
+              Our journey began with a vision to empower busy professionals with cutting-edge tools and has evolved into a 
+              comprehensive platform that touches millions of businesses across the world.
             </p>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Under the visionary leadership of Kumar Mangalam Birla, we continue to establish new foundations of 
-              success while staying true to our core values of integrity, commitment, passion, seamlessness, and speed.
+              Under visionary leadership, we continue to establish new foundations of 
+              success while staying true to our core values of innovation, efficiency, quality, seamlessness, and speed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-ab-maroon hover:bg-ab-maroon-dark text-white">
@@ -38,8 +38,8 @@ export default function LegacySection() {
             />
             <div className="absolute -bottom-6 -right-6 bg-ab-gold text-white p-6 rounded-xl shadow-xl">
               <div className="text-center">
-                <div className="text-3xl font-bold">70+</div>
-                <div className="text-sm">Years of Excellence</div>
+                <div className="text-3xl font-bold">10+</div>
+                <div className="text-sm">Years of Innovation</div>
               </div>
             </div>
           </div>
@@ -50,18 +50,18 @@ export default function LegacySection() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="text-4xl text-ab-gold mb-6">"</div>
             <blockquote className="text-xl md:text-2xl font-light leading-relaxed mb-8">
-              Our commitment to excellence, innovation, and sustainable development continues to drive our success 
-              across diverse industries and geographies.
+              Our commitment to innovation, automation, and digital transformation continues to drive our success 
+              across diverse industries and business solutions.
             </blockquote>
             <div className="flex items-center justify-center">
               <img
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
-                alt="Kumar Mangalam Birla"
+                alt="QoreWorks CEO"
                 className="w-16 h-16 rounded-full border-3 border-ab-gold mr-4"
               />
               <div className="text-left">
-                <div className="font-semibold text-lg">Kumar Mangalam Birla</div>
-                <div className="text-ab-gold">Chairman, Aditya Birla Group</div>
+                <div className="font-semibold text-lg">Leadership Team</div>
+                <div className="text-ab-gold">CEO, QoreWorks</div>
               </div>
             </div>
           </div>
