@@ -6,7 +6,7 @@ const businesses = [
   {
     title: "Corporate Uniforms",
     description: "Professional uniform solutions with modern design and sustainable manufacturing processes.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+    image: "/corporate-uniforms.jpg",
     icon: "👔",
   },
   {
