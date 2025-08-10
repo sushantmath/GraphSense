@@ -67,7 +67,7 @@ export default function HeroCarousel() {
   };
 
   return (
-    <section id="home" className="hero-carousel relative overflow-hidden">
+    <section id="home" className="hero-carousel relative overflow-hidden pt-20">
       <div className="carousel-container relative w-full h-full">
         {slides.map((slide, index) => (
           <div

@@ -32,32 +32,28 @@ export default function Navigation() {
   ];
 
   return (
-    <nav
-      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-lg" : "bg-transparent"
-      }`}
-    >
+    <nav className="fixed w-full top-0 z-50 bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
               <img 
                 src="/attached_assets/Screenshot 2025-08-10 at 7.27.39 PM_1754834284586.png" 
                 alt="QoreWorks Logo" 
-                className="h-8 w-8 mr-3"
+                className="h-10 w-10 mr-3"
               />
-              <span className="text-2xl font-bold text-ab-maroon">QoreWorks</span>
+              <span className="text-3xl font-bold text-ab-maroon">QoreWorks</span>
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-baseline space-x-10">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-ab-charcoal hover:text-ab-maroon transition duration-300 font-medium"
+                  className="text-ab-charcoal hover:text-ab-maroon transition duration-300 font-medium text-lg"
                 >
                   {item.label}
                 </button>
@@ -87,7 +83,7 @@ export default function Navigation() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block px-3 py-2 text-ab-charcoal hover:text-ab-maroon transition duration-300 font-medium w-full text-left"
+                className="block px-3 py-2 text-ab-charcoal hover:text-ab-maroon transition duration-300 font-medium w-full text-left text-lg"
               >
                 {item.label}
               </button>
