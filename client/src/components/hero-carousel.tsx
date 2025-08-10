@@ -11,17 +11,17 @@ const slides = [
     backgroundImage: "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080",
     buttons: [
       { text: "Our Businesses", link: "businesses", icon: ArrowRight },
-      { text: "Our Legacy", link: "legacy", icon: ExternalLink, variant: "outline" as const },
+      { text: "Innovation", link: "innovation", icon: ExternalLink, variant: "outline" as const },
     ],
   },
   {
     id: 2,
-    title: "Legacy &",
-    subtitle: "Leadership",
-    description: "Establishing a foundation of success through visionary leadership and sustainable growth across diverse industries.",
+    title: "Professional",
+    subtitle: "Automation",
+    description: "Empowering busy professionals with cutting-edge automation tools and streamlined business solutions.",
     backgroundImage: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080",
     buttons: [
-      { text: "Read More", link: "legacy", icon: ArrowRight },
+      { text: "Our Solutions", link: "businesses", icon: ArrowRight },
     ],
   },
   {

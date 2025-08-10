@@ -1,9 +1,7 @@
 import Navigation from "@/components/navigation";
 import HeroCarousel from "@/components/hero-carousel";
 import BusinessShowcase from "@/components/business-showcase";
-import LegacySection from "@/components/legacy-section";
 import InnovationSection from "@/components/innovation-section";
-import CommunitySection from "@/components/community-section";
 import CareersSection from "@/components/careers-section";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
@@ -36,9 +34,7 @@ export default function Home() {
       <main>
         <HeroCarousel />
         <BusinessShowcase />
-        <LegacySection />
         <InnovationSection />
-        <CommunitySection />
         <CareersSection />
         <ContactSection />
       </main>

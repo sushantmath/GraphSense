@@ -3,10 +3,9 @@ import { Heart } from "lucide-react";
 export default function Footer() {
   const quickLinks = [
     { label: "Our Businesses", href: "#businesses" },
-    { label: "Legacy & Leadership", href: "#legacy" },
     { label: "Innovation", href: "#innovation" },
-    { label: "Community", href: "#community" },
     { label: "Careers", href: "#careers" },
+    { label: "Contact", href: "#contact" },
   ];
 
   const resources = [
