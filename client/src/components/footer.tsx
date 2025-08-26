@@ -1,4 +1,5 @@
 import { Heart } from "lucide-react";
+import { FaLinkedin, FaFacebook, FaInstagram, FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   const quickLinks = [
@@ -17,10 +18,10 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { label: "LinkedIn", href: "#" },
-    { label: "Twitter", href: "#" },
-    { label: "Facebook", href: "#" },
-    { label: "Instagram", href: "#" },
+    { label: "LinkedIn", href: "#", icon: <FaLinkedin /> },
+    { label: "X", href: "#", icon: <FaXTwitter /> },
+    { label: "Facebook", href: "#", icon: <FaFacebook /> },
+    { label: "Instagram", href: "#", icon: <FaInstagram /> },
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -39,27 +40,26 @@ export default function Footer() {
               <img 
                 src="/qoreworks-logo.svg" 
                 alt="QoreWorks Logo" 
-                className="h-10 w-10 mr-3"
+                className="h-14 w-14 mr-0"
+                style={{ filter: 'brightness(0) saturate(100%) invert(32%) sepia(24%) saturate(1117%) hue-rotate(175deg) brightness(92%) contrast(90%)' }}
               />
-              <div className="text-3xl font-bold text-ab-maroon">QoreWorks</div>
+              <span className="text-3xl font-bold" style={{ color: 'rgb(61,103,148)', marginTop: '4px', display: 'inline-block' }}>QoreWorks</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-lg leading-relaxed">
-              A Force For Good. With innovative technology solutions and responsible business practices, we continue to shape 
-              industries and communities worldwide through automation, efficiency, and excellence.
+              QoreWorks. With innovative solutions and responsible business practices, we continue to shape 
+              industries worldwide through automation, efficiency, and excellence.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
                   href={social.href}
-                  className="text-gray-300 hover:text-ab-gold transition duration-300"
+                  className="text-gray-300 hover:text-ab-gold transition duration-300 text-2xl"
                   aria-label={social.label}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <span className="text-xl">
-                    {social.label === "LinkedIn" ? "Li" : 
-                     social.label === "Twitter" ? "Tw" :
-                     social.label === "Facebook" ? "Fb" : "Ig"}
-                  </span>
+                  {social.icon}
                 </a>
               ))}
             </div>
@@ -101,10 +101,10 @@ export default function Footer() {
         <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              &copy; 2024 QoreWorks. All rights reserved.
+              &copy; 2025 QoreWorks. All rights reserved.
             </p>
             <p className="text-gray-400 text-sm mt-4 md:mt-0 flex items-center">
-              Designed with <Heart className="text-ab-maroon mx-1 w-4 h-4" /> for a better tomorrow
+              Quality at the Core of our Business.
             </p>
           </div>
         </div>

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { FaLinkedin, FaFacebook, FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { MapPin, Phone, Mail, ArrowRight, NotebookPen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -76,17 +77,15 @@ export default function ContactSection() {
   };
 
   const businessVerticals = [
-    { label: "Corporate Uniforms", value: "corporate-uniforms" },
-    { label: "Corporate Gifting", value: "corporate-gifting" },
-    { label: "D2C Brand", value: "d2c-brand" },
+  { label: "Corporate Uniforms", value: "corporate-uniforms" },
+  { label: "Corporate Gifting", value: "corporate-gifting" },
   ];
 
   const socialLinks = [
-    { icon: "linkedin", href: "#" },
-    { icon: "twitter", href: "#" },
-    { icon: "facebook", href: "#" },
-    { icon: "instagram", href: "#" },
-    { icon: "youtube", href: "#" },
+    { icon: <FaLinkedin />, href: "#", label: "LinkedIn" },
+    { icon: <FaXTwitter />, href: "#", label: "X" },
+    { icon: <FaFacebook />, href: "#", label: "Facebook" },
+    { icon: <FaInstagram />, href: "#", label: "Instagram" },
   ];
 
   return (
@@ -115,7 +114,7 @@ export default function ContactSection() {
                       type="text"
                       value={formData.firstName}
                       onChange={(e) => handleInputChange("firstName", e.target.value)}
-                      placeholder="John"
+                      placeholder="Ramesh"
                       className="focus:ring-2 focus:ring-ab-maroon focus:border-transparent"
                     />
                   </div>
@@ -128,7 +127,7 @@ export default function ContactSection() {
                       type="text"
                       value={formData.lastName}
                       onChange={(e) => handleInputChange("lastName", e.target.value)}
-                      placeholder="Doe"
+                      placeholder="Kumar"
                       className="focus:ring-2 focus:ring-ab-maroon focus:border-transparent"
                     />
                   </div>
@@ -143,7 +142,7 @@ export default function ContactSection() {
                     type="email"
                     value={formData.email}
                     onChange={(e) => handleInputChange("email", e.target.value)}
-                    placeholder="john.doe@company.com"
+                    placeholder="ramesh.kumar@company.com"
                     className="focus:ring-2 focus:ring-ab-maroon focus:border-transparent"
                   />
                 </div>
@@ -159,7 +158,6 @@ export default function ContactSection() {
                     <SelectContent>
                       <SelectItem value="corporate-uniforms">Corporate Uniforms</SelectItem>
                       <SelectItem value="corporate-gifting">Corporate Gifting</SelectItem>
-                      <SelectItem value="d2c-brand">D2C Brand</SelectItem>
                       <SelectItem value="partnership">Partnership Opportunities</SelectItem>
                       <SelectItem value="general">General Inquiry</SelectItem>
                     </SelectContent>
@@ -184,7 +182,7 @@ export default function ContactSection() {
                   type="submit"
                   size="lg"
                   disabled={contactMutation.isPending}
-                  className="w-full bg-ab-maroon hover:bg-ab-maroon-dark text-white"
+                  className="w-full bg-ab-gold hover:bg-yellow-500 text-white font-semibold px-8 py-4"
                 >
                   {contactMutation.isPending ? "Sending..." : "Send Message"}
                   <NotebookPen className="ml-2 w-5 h-5" />
@@ -199,56 +197,43 @@ export default function ContactSection() {
               <h3 className="text-2xl font-bold text-ab-charcoal mb-6">Contact Information</h3>
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 bg-ab-maroon rounded-lg flex items-center justify-center mr-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-ab-gold rounded-lg flex items-center justify-center mr-4">
                     <MapPin className="text-white w-6 h-6" />
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-ab-charcoal mb-1">Head Office</h4>
                     <p className="text-gray-600">
-                      QoreWorks Headquarters<br />
-                      Innovation District, Tech City
+                      QoreWorks PRO LLP<br />
+                      No. 32/1 Sy No. 1/2, First Floor, RMV 2nd Stage,<br />
+                      4th Block MLA Layout, Lottegollahalli,<br />
+                      Bangalore, Karnataka, 560094
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 bg-ab-maroon rounded-lg flex items-center justify-center mr-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-ab-gold rounded-lg flex items-center justify-center mr-4">
                     <Phone className="text-white w-6 h-6" />
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-ab-charcoal mb-1">Phone</h4>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <p className="text-gray-600">+91 97408 77966,<br />+91 95388 94365</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 bg-ab-maroon rounded-lg flex items-center justify-center mr-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-ab-gold rounded-lg flex items-center justify-center mr-4">
                     <Mail className="text-white w-6 h-6" />
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-ab-charcoal mb-1">Email</h4>
-                    <p className="text-gray-600">contact@qoreworks.com</p>
+                    <p className="text-gray-600">info@qoreworks.com</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Business Verticals Quick Contact */}
-            <Card className="bg-ab-maroon text-white">
-              <CardContent className="p-6">
-                <h4 className="text-xl font-bold mb-4">Business Verticals</h4>
-                <div className="grid grid-cols-1 gap-4">
-                  {businessVerticals.map((vertical, index) => (
-                    <div key={index} className="flex justify-between items-center">
-                      <span>{vertical.label}</span>
-                      <Button variant="ghost" size="sm" className="text-ab-gold hover:text-white p-1">
-                        <ArrowRight className="w-4 h-4" />
-                      </Button>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+            {/* Business Verticals Quick Contact removed as per request */}
 
             {/* Social Media Links */}
             <div>
@@ -259,18 +244,13 @@ export default function ContactSection() {
                     key={index}
                     variant="default"
                     size="lg"
-                    className="w-12 h-12 p-0 bg-ab-maroon hover:bg-ab-maroon-dark rounded-lg"
+                    className="w-12 h-12 p-0 bg-ab-gold hover:bg-yellow-500 text-ab-navy rounded-lg text-2xl font-semibold"
                     asChild
                   >
-                    <a href={social.href} target="_blank" rel="noopener noreferrer">
-                      <span className="sr-only">{social.icon}</span>
-                      {/* Icon placeholder - in real implementation, use proper social media icons */}
-                      <span className="text-white">
-                        {social.icon === "linkedin" ? "Li" : 
-                         social.icon === "twitter" ? "Tw" :
-                         social.icon === "facebook" ? "Fb" :
-                         social.icon === "instagram" ? "Ig" : "Yt"}
-                      </span>
+                    <a href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>
+                      {social.icon && typeof social.icon === 'object' && 'type' in social.icon
+                        ? React.cloneElement(social.icon, { className: 'text-white ' + (social.icon.props.className || '') })
+                        : social.icon}
                     </a>
                   </Button>
                 ))}

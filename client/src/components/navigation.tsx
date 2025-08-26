@@ -40,9 +40,10 @@ export default function Navigation() {
               <img 
                 src="/qoreworks-logo.svg" 
                 alt="QoreWorks Logo" 
-                className="h-10 w-10 mr-3"
+                className="h-14 w-14 mr-0"
+                style={{ filter: 'brightness(0) saturate(100%) invert(32%) sepia(24%) saturate(1117%) hue-rotate(175deg) brightness(92%) contrast(90%)' }}
               />
-              <span className="text-3xl font-bold text-ab-maroon">QoreWorks</span>
+              <span className="text-3xl font-bold" style={{ color: 'rgb(61,103,148)', marginTop: '4px', display: 'inline-block' }}>QoreWorks</span>
             </div>
           </div>
 

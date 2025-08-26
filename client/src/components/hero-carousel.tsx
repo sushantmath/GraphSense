@@ -5,33 +5,32 @@ import { Button } from "@/components/ui/button";
 const slides = [
   {
     id: 1,
-    title: "A Force",
-    subtitle: "For Good",
-    description: "With innovative technology solutions and responsible business practices, we continue to shape industries and communities worldwide through automation, efficiency, and excellence.",
+  title: "QoreWorks | Uniforms & Workwear",
+  subtitle: "",
+  description: "",
     backgroundImage: "/force-for-good.png",
     buttons: [
-      { text: "Our Businesses", link: "businesses", icon: ArrowRight },
-      { text: "Innovation", link: "innovation", icon: ExternalLink, variant: "outline" as const },
+      { text: "Explore Solutions", link: "businesses", icon: ArrowRight },
     ],
   },
   {
     id: 2,
-    title: "Professional",
-    subtitle: "Automation",
-    description: "Empowering busy professionals with cutting-edge automation tools and streamlined business solutions.",
-    backgroundImage: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080",
+    title: "QoreWorks | Corporate Gifting",
+    subtitle: "",
+    description: "",
+  backgroundImage: "/corporate-gifting.jpg",
     buttons: [
-      { text: "Our Solutions", link: "businesses", icon: ArrowRight },
+  { text: "Explore Catalogue", link: "businesses", icon: ArrowRight },
     ],
   },
   {
     id: 3,
-    title: "Innovation",
-    subtitle: "& Technology",
-    description: "Pushing the boundaries of what's possible through disruptive technologies and visionary thinking.",
-    backgroundImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080",
+    title: "QoreWorks | D2C Fashion Brand",
+    subtitle: "",
+    description: "",
+  backgroundImage: "/d2c-fashion.jpg",
     buttons: [
-      { text: "Explore Innovation", link: "innovation", icon: ArrowRight },
+      { text: "Launching Soon", icon: ArrowRight },
     ],
   },
 ];
@@ -85,31 +84,70 @@ export default function HeroCarousel() {
             <div className="absolute inset-0 bg-black bg-opacity-50" />
             <div className="relative z-10 h-full flex items-center justify-center">
               <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in">
-                  {slide.title}
-                  <br />
-                  <span className="text-ab-gold">{slide.subtitle}</span>
+                <h1 className="text-white mb-6 animate-fade-in" style={(slide.id === 1 || slide.id === 2 || slide.id === 3) ? { fontSize: 40 } : {}}>
+                  {slide.id === 1 ? (
+                    <>
+                      <span className="font-normal">QoreWorks</span>
+                      <span className="font-bold"> | Uniforms &amp; Workwear</span>
+                    </>
+                  ) : slide.id === 2 ? (
+                    <>
+                      <span className="font-normal">QoreWorks</span>
+                      <span className="font-bold"> | Corporate Gifting</span>
+                    </>
+                  ) : slide.id === 3 ? (
+                    <>
+                      <span className="font-normal">QoreWorks</span>
+                      <span className="font-bold"> | D2C Fashion Brand</span>
+                    </>
+                  ) : (
+                    <>
+                      <span className="font-bold">{slide.title}</span>
+                      <br />
+                      <span className="text-ab-gold">{slide.subtitle}</span>
+                    </>
+                  )}
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto animate-fade-in">
                   {slide.description}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-                  {slide.buttons.map((button, btnIndex) => (
-                    <Button
-                      key={btnIndex}
-                      onClick={() => scrollToSection(button.link)}
-                      variant={button.variant || "default"}
-                      size="lg"
-                      className={`${
-                        button.variant === "outline"
-                          ? "border-2 border-white text-white hover:bg-white hover:text-ab-maroon"
-                          : "bg-ab-maroon hover:bg-ab-maroon-dark text-white"
-                      } px-8 py-4 font-semibold transition duration-300`}
-                    >
-                      {button.text}
-                      <button.icon className="ml-2 w-5 h-5" />
-                    </Button>
-                  ))}
+                  {slide.buttons.map((button, btnIndex) => {
+                    // For D2C Fashion Brand (slide 3), render a static button with gold style
+                    if (slide.id === 3) {
+                      return (
+                        <Button
+                          key={btnIndex}
+                          size="lg"
+                          className="bg-ab-gold hover:bg-yellow-500 text-white font-semibold px-8 py-4"
+                          disabled
+                        >
+                          {button.text}
+                          <button.icon className="ml-2 w-5 h-5" />
+                        </Button>
+                      );
+                    }
+                    // Special style for 'Explore Solutions' and 'Explore Catalogue' buttons
+                    const isExploreSolutions = button.text === "Explore Solutions";
+                    const isExploreCatalogue = button.text === "Explore Catalogue";
+                    return (
+                      <Button
+                        key={btnIndex}
+                        onClick={"link" in button ? () => scrollToSection(button.link) : undefined}
+                        size="lg"
+                        className={
+                          isExploreSolutions || isExploreCatalogue
+                            ? "bg-ab-gold hover:bg-yellow-500 text-white font-semibold px-8 py-4"
+                            : ("variant" in button && button.variant === "outline"
+                                ? "border-2 border-white text-white hover:bg-white hover:text-ab-maroon px-8 py-4 font-semibold transition duration-300"
+                                : "bg-ab-maroon hover:bg-ab-maroon-dark text-white px-8 py-4 font-semibold transition duration-300")
+                        }
+                      >
+                        {button.text}
+                        <button.icon className="ml-2 w-5 h-5" />
+                      </Button>
+                    );
+                  })}
                 </div>
               </div>
             </div>

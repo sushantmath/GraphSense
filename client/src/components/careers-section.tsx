@@ -54,10 +54,10 @@ const careerLinks = [
 
 export default function CareersSection() {
   return (
-    <section id="careers" className="py-20 bg-ab-maroon text-white">
+    <section id="careers" className="py-20 text-white" style={{ background: 'rgb(51, 85, 139)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Join Our Team</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Story</h2>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             Discover your next chapter with us. Explore a rewarding career with QoreWorks that aligns 
             with your purpose, passion, and potential.
@@ -65,30 +65,50 @@ export default function CareersSection() {
         </div>
 
         {/* Career Gallery */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-          {careerImages.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`Career image ${index + 1}`}
-              className="rounded-lg shadow-lg hover:scale-105 transition duration-300 w-full h-32 md:h-40 object-cover"
-            />
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              {["/story1.png", "/story2.png", "/story3.png"].map((image, index) => (
+                <div key={index} className="flex flex-col items-center">
+                  <div className="relative w-full h-64">
+                    <img
+                      src={image}
+                      alt={`Career image ${index + 1}`}
+                      className="rounded-lg shadow-lg hover:scale-105 transition duration-300 w-full h-64 object-cover"
+                      style={{ filter: 'grayscale(100%)', border: '2px solid white' }}
+                    />
+                    <div className="absolute inset-0 rounded-lg pointer-events-none" style={{ background: 'rgba(183,205,194,0.18)' }} />
+                  </div>
+                  {index === 0 && (
+                    <span className="mt-2 text-white text-lg md:text-xl" style={{ fontFamily: 'inherit' }}>
+                      From Pink Slip to Big Flip
+                    </span>
+                  )}
+                  {index === 1 && (
+                    <span className="mt-2 text-white text-lg md:text-xl" style={{ fontFamily: 'inherit' }}>
+                      Fueling Dreams from the Car Tank
+                    </span>
+                  )}
+                  {index === 2 && (
+                    <span className="mt-2 text-white text-lg md:text-xl" style={{ fontFamily: 'inherit' }}>
+                      Journey - onward and upwards!
+                    </span>
+                  )}
+                </div>
+              ))}
         </div>
 
         {/* Career Links Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {careerLinks.map((link, index) => (
-            <Card key={index} className="glassmorphism border-white/20 hover:bg-white/20 transition duration-300">
-              <CardContent className="p-6">
+            <Card key={index} className="bg-white border rounded-lg shadow hover:shadow-2xl transition-all duration-500 overflow-hidden">
+              <CardContent className="p-8">
                 <div className="flex items-center mb-4">
                   <link.icon className="text-ab-gold text-2xl mr-3 w-6 h-6" />
-                  <h3 className="text-xl font-semibold text-white">{link.title}</h3>
+                  <h3 className="text-xl font-bold text-ab-charcoal">{link.title}</h3>
                 </div>
-                <p className="text-gray-200 mb-4 leading-relaxed">{link.description}</p>
+                <p className="text-gray-600 mb-4 leading-relaxed">{link.description}</p>
                 <Button
                   variant="ghost"
-                  className="text-ab-gold hover:text-white p-0 h-auto font-semibold"
+                  className="text-ab-gold hover:text-ab-charcoal p-0 h-auto font-semibold"
                 >
                   {link.title.includes("Explore") ? "Explore Now" : 
                    link.title.includes("Life") ? "Learn More" :
